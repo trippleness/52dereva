@@ -130,6 +130,10 @@
     color: var(--text);
     margin-bottom: 24px;
   }
+  h1 span,
+  h1 em {
+    display: block;
+  }
   h1 em {
     font-style: normal;
     color: var(--accent);
@@ -372,8 +376,9 @@
       line-height: 1.02;
       margin-bottom: 18px;
     }
-    h1 br {
-      display: none;
+    h1 span,
+    h1 em {
+      display: inline;
     }
     .hero-sub {
       font-size: 15px;
@@ -396,18 +401,24 @@
     .hero-stats {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
+      gap: 18px;
+      align-items: start;
     }
     .stat-divider {
       display: none;
     }
+    .stat {
+      min-width: 0;
+    }
     .stat-num {
       font-size: 18px;
       white-space: nowrap;
+      letter-spacing: -0.04em;
     }
     .stat-label {
       font-size: 10px;
       line-height: 1.35;
+      letter-spacing: 0.03em;
     }
 
     .hero-right {
@@ -454,7 +465,7 @@
     <div class="hero-left">
       <div class="hero-ghost">52</div>
       <span class="hero-eyebrow">Профессиональная арбористика</span>
-      <h1>Работаем там,<br>где другие<br><em>не берутся</em></h1>
+      <h1><span>Работаем там,</span><span>где другие</span><em>не берутся</em></h1>
       <p class="hero-sub">Спил аварийных деревьев, санитарная обрезка и каблинг — безопасно, с полным контролем на любой высоте. Нижегородская область.</p>
       <div class="hero-actions">
         <a href="https://t.me/Arborist" target="_blank" class="btn-primary">
